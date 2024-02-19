@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RGS+TMS</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+  <style>
+    /* CSS Styling for the whole HTML website */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      padding: 20px 0px; /* Add padding to the top and bottom */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Ensure header stays on top of other content */
+    }
+
+    header nav {
+      display: flex;
+      align-items: center; /* Align items vertically */
+      justify-content: flex-start; /* Center align navigation links */
+      gap: 0px; /* Add space between elements */
+    }
+
+    header nav img {
+      display: flex;
+      align-items: center;
+      width: 130px; /* Adjust the width of the logo */
+      height: auto; /* Maintain aspect ratio */
+
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Panton Caps';
+      margin: 0 20px; /* Add spacing between navigation links */
+      font-size: 20px;
+      transition: color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    header nav a:hover {
+      color: #ffc107; /* Change color on hover */
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      margin-top: 30px;
+    }
+
+    .text {
+      flex: 1;
+      margin-right: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .text h1 {
+      font-size: 200px;
+      font-family: 'Panton Caps Black';
+      color: #66481c;
+      font-weight:900;
+      margin: 0;
+      vertical-align: baseline;
+      margin-bottom: 0%;
+      letter-spacing:-5px;
+      line-height: 170px;
+    }
+
+    .text h2 {
+        font-size: 40px;
+        font-family: 'Panton Caps Light';
+        color: white;
+        margin-top:0%;
+        line-height: 10px;
+    }
+
+    .image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .image img {
+      max-width: 100%;
+      max-height: 840px;
+      border-radius: 0px;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 20px;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .skill-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      padding: 20px;
+      margin-left: 15%;
+      margin-right: 15%;
+      align-content:stretch;
+
+    }
+    
+    .projects-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap:wrap;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left: 15%;
+      margin-right: 15%;
+      align-content:flex-start;
+    }
+
+    section.about-me {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section.about-me h3 {
+      color: #66481c;
+      margin-top:2%;
+      font-family:'Panton Caps';
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    section.about-me p {
+      color: #333;
+      font-size: 23px;
+      text-align: left;
+      margin-left: 5%;
+      font-family:'Panton';
+    }
+
+    section.about-me img {
+      max-width: 100%;
+      margin-top: 20px;
+      max-height: 470px;
+    }
+    
+    section.projects {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section.projects h3 {
+      color: #66481c;
+      margin-top:2%;
+      font-family:'Panton Caps';
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    section.projects p {
+      color: #333;
+      font-size: 23px;
+      text-align: left;
+      margin-left: 5%;
+      font-family:'Panton';
+    }
+
+    section.projects img {
+      max-width: 100%;
+      margin-top: 20px;
+      max-height: 300px;
+      border: solid 1px #333;
+      border-radius: 10%;
+    }
+    
+    section.skills {
+      background-color:#333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section.skills h3 {
+      color: #ffffff;
+      margin-top:2%;
+      font-family:'Panton Caps';
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    section.projects h2 {
+      color: #333;
+      font-size: 25px;
+      text-align: left;
+      align-items: center;
+      margin-left: 5%;
+      margin-top:13%;
+      font-family:'Panton Thin';
+      font-style: italic;
+    }
+    section.skills h2 {
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      align-items: center;
+      margin-top: -2.5%;
+      font-family:'Panton Thin';
+      font-style: italic;
+      justify-content: space-around;
+    }
+    
+    section.skills p {
+      color: #e4e4e4;
+      font-size: 23px;
+      text-align: justify;
+      margin-left: 5%;
+      font-family:'Panton';
+    }
+
+    section.skills img {
+      max-width: 100%;
+      margin-top: 20px;
+      max-height: 400px;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 1);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position:relative;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    footer img {
+      width: 100px; /* Adjust the width of the logo */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 10px; /* Add some space between logo and text */
+    }
+
+    footer p {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+<!-- Header section-->
+  <header>
+    <nav>
+      <a href="#home"><img src="images/rgsoutline1.png" alt="logo"></a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home section -->
+  <div class="container", id ="home">
+    <div class="text">
+      <h1>RIGGS </h1>
+      <h1>MIKAEL </h1>
+      <h1>TOMAS</h1>
+      <h2 style="margin-top: 3%;">BS Computer Science</h2>
+      <h2>Batch 2022</h2>
+    </div>
+    <div class="image">
+      <img src="images/riggs2.png" alt="Your Picture">
+    </div>
+  </div>
+
+  <!-- About me section -->
+  <section class="about-me", id= "about">
+    <h3>About Me</h3>
+    <div class="about-container">
+      <img src="images/ateneo.jpg" alt="Ateneo Picture">
+      <div style="display:flex; flex-direction: column;">
+        <p style="font-weight: bold;">HI, I AM <u>RIGGS</u>!</p>
+        <p>A former student of <b><u>Ateneo de Manila Senior High School</u></b> and currently a graduating <b><u>BS Computer Science</u></b> student from <b><u>University of the Philippines Los Baños</u></b>.</p>
+        <p>I could say that ever since I was a kid, I was into all types of technology especially playing video games. I didn't have my personal computer until 2014, so I had to go to our nearest computer shop or <i>piso net</i>, just to play and explore the wonders of this kind of technology.</p>
+        <p>There were a lot of factors in me pursuing this course, but the one thing that really pushed me in pursuing this career was my EmpTech subject back in Ateneo Senior High School. A young me wouldn't envision to make a living out of this. </p>
+      </div>
+  </section>
+
+  <!-- Skills section -->
+  <section class="skills">
+    <h3>MY SKILLS</h3>
+    <div class="about-container">
+      <p>I have a well-formed experience in coding different programming languages such as <b> C</b>,<b> C#</b>,<b> Python</b>,<b> R</b>, and<b> java</b>. Web development in <b>HTML/CSS/JavaScript</b>. As of this moment, I am exploring different types of programming languages such as <b>Assembly</b>, for low-level programming, and <b>Dart</b>, for mobile programming.</p>
+      <p>Graphic designing, photo editing, photo manipulation, and video editing are my creative passions. I really enjoy crafting pubmats, enhancing and manipulating photos when needed, and editing videos for projects. The programs I usually use is <b>Adobe Photoshop</b> and <b>Adobe Premiere Pro</b>. Each project is an opportunity for me to explore new techniques and push the boundaries for my creativity.</p>
+    </div>
+  </section>
+
+  <!-- Projects section -->
+  <section class="projects", id= "projects">
+      <h3>PROJECTS</h3>
+      <div class="projects-container">
+      <div style="display:flex; flex-direction: row;">
+        <img src="images/blackjack.png" alt="cmsc12">
+        <h2><u>CMSC 12</u> project: A blackjack game with working leaderboard done in python.</h2>
+      </div>
+      <div style="display:flex; flex-direction: row;">
+        <img src="images/cmsc150.png" alt="cmsc150">
+        <h2><u>CMSC 150</u> project: A working application that can solve QSI, PolyReg, and Diet Problem through Simplex Method using R.</h2>
+      </div>
+      <div style="display:flex; flex-direction: row;">
+        <img src="images/cmsc22.png" alt="cmsc22">
+        <h2><u>CMSC 22</u> project: A Mortal Kombat inspired 2D fighting game done in java.</h2>
+      </div>
+    </div>
+  </section>
+    <section class="skills">
+      <div class="skill-container">
+        <img src="images/edit.jpg" alt="graphic Picture 1">
+        <img src="images/edit2.png" alt="graphic Picture 2">
+      </div>
+      <div class="skill-container">
+        <h2>A pubmat for Ateneo Film Organization</h2>
+        <h2>Vector art activity for ARTS 1 subject</h2>
+      </div>
+    </div>
+    </section>
+
+    <!-- Footer Section -->
+  <footer id = "contact">
+    <p>rttomas@up.edu.ph | 09950441357 | @rgstms | © 2024</p>
+    <a href="#home"><img src="images/rgswhite.png" alt="logo"></a>
+  </footer>
+
+</body>
+</html>
