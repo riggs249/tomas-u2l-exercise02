@@ -4,7 +4,7 @@
 
  BS Computer Science
 
- riggs249.github.io/tomas-u2l-exercise02/tomas-u2l-exercise02.html
+ [riggs249.github.io/tomas-u2l-exercise02/tomas-u2l-exercise02.html](https://riggs249.github.io/tomas-u2l-exercise02/tomas-u2l-exercise02.html)
 
 Steps:
     
